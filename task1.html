@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<style>
+body{
+      width: 500px;
+      padding-left: 400px;
+      
+}
+</style>
+<script>
+    $(document).ready(function () {
+      $("#id1").click(function () {
+        $("#id2").toggle();
+      });
+    });
+  </script>
+<body>
+  <button id="id1" style="padding-right: 20px;">show register form</button><br><br>
+    <div style="border: solid; padding-left: 20px;padding-bottom: 20px;background-color: rgb(211, 188, 238);">
+    <form action="" method="post" id="id2"><br>
+  
+    <label><b>NAME</b></label><br>
+    <input type="text" name="name" placeholder="enter name" required><br><br>
+    <label><b>EMAIL-ID</b></label><br>
+    <input type="email" name="email-id" placeholder="enter email-id" required><br><br>
+    <label><b>PHONE NUMBER</b></label><br>
+    <input type="text" name="name" placeholder="enter number" required><br><br>
+    <button type="submit" >register</button>
+    </form>
+</div>
+</body>
+</html>
