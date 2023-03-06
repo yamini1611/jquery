@@ -8,14 +8,19 @@
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
+<style>
+    body{
+        background-color: rgb(171, 186, 233);
+    }
+</style>
 <script>
     $(document).ready(function () {
        $("#id1").click(function () {
           $("#id2").animate({
-                left: '+=140px'},2000
+                left: '+=140px'}
            );
            $("#id3").animate({
-              right:'+=30px'},2000,
+              left:'+=130px'},
             (function (){
                 $("id3").animate(
                    
@@ -29,12 +34,27 @@
 
 
 </script>
+<script>
+    $(document).ready(function () {
+      $("#id1").click(function () {
+        $("body").css({background:'grey' });
+        $("#id3").animate({
+            left: '+=150px'},7000
+         
+        );
+         
+        });
+      });
+  
+  </script>
+     
 
 <body>
-<button id="id1">start animation</button><br>
+<button id="id1">start animation</button><br><br>
     <img src="assets/ani1.jpg" height="150px" width="150px" id="id2" style="position: relative; ">
    
  <img src="assets/ani2.jpg" height="50px " width="50px" id="id3" style="position:relative;padding-left: 600px;">
+
 <!--<img src="assets/ani3.jpg" height="150px" width="150px" id="id2" style="position: relative;">
 <img src="assets/ani4.jpg" height="150px" width="150px" id="id3" style="position: relative; padding-left: 650px;">-->
 

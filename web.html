@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      
+      $(document).ready(function(){
+            $("#APPEND").click(function(){
+                $("#MOB").append(" <img src=assets/lap2.jpg height=100px width=100px>" );
+            });
+        });
+
+        $(document).ready(function(){
+            $("#PREPEND").click(function(){
+                $("#LAP").prepend(" <img src=assets/mob1.jpg height=100px width=100px>" );
+            });
+        });
+
+
+    
+        // $(function () {
+        //   $("#accordion").accordion();
+        // });
+        $(function () {
+            $("#accordion").accordion({
+                collapsible: true
+            });
+        });
+        $(function () {
+            $("#accordion1").accordion({
+                collapsible: true
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="accordion">
+        <button>tab 1</button>
+
+
+
+        <div>
+            <p ID="MOB"></p>
+            <img src="assets/mob1.jpg" width="70px" height="100px" id="t1" style="position: relative;" />
+            <img src="assets/mob2.jpg" width="100px" height="100px" id="t1" style="position: relative;" /><br>
+        
+            <img src="assets/lap1.jpg" width="100px" height="100px" id="p1" style="position: relative;" />
+        </div>
+
+        <button>tab 2</button>
+        <div>
+            <p ID="LAP"></p>
+            <img src="assets/lap1.jpg" width="100px" height="100px" id="t1" style="position: relative;" />
+            <img src="assets/lap2.jpg" width="100px" height="100px" id="t1" style="position: relative;" />
+        
+            <img src="assets/mob1.jpg" width="100px" height="100px" id="p2" style="position: relative;" />
+        </div>
+    </div>
+    
+    <button id="APPEND">  APPEND A IMAGE</button>
+   <button id="PREPEND"> PREPEND A IMAGE</button>
+</body>
+
+</html>
